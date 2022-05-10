@@ -1,6 +1,6 @@
 // Simulador de carrito de compras
 
-let productos = prompt("Elige tu producto: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n ESC para finalizar la compra")
+let productos = prompt("Elige tu producto: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n Escribe ESC para finalizar la compra")
 
 function carrito() {
     switch (productos) {
@@ -37,7 +37,7 @@ function precioFinal(precio) {
 
 do{
     carrito()
-    productos = prompt("Elige tu producto: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n ESC para finalizar la compra")
+    productos = prompt("Elige tu producto: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n Escribe ESC para finalizar la compra")
 }while (productos != 'ESC') {
     alert('El precio total de tu compra es: ' + precioTotal)
 }
