@@ -1,0 +1,15 @@
+/* Normalize */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+}
