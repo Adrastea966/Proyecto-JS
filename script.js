@@ -1,6 +1,8 @@
 // Simulador de carrito de compras
 
-let listaProductos = prompt("¡Hola! escribí DO para ver los productos disponibles")
+let listaBebidasPrecios = ''
+let listaProductos;
+listaProductos = prompt("¡Hola! escribí DO para ver los productos disponibles")
 
 const bebidas = [{
     bebida: "Leche de coco",
@@ -20,14 +22,17 @@ const bebidas = [{
     precioProducto: 470
 }, ];
 
-let listaBebidasPrecios = ""
-
 bebidas.forEach((refresco) => {
     listaBebidasPrecios += refresco.bebida + "\n"
     listaBebidasPrecios += "$" + refresco.precioProducto + "\n"
 })
 
-alert(listaBebidasPrecios)
+while(listaProductos !== "DO"){
+    alert("Incorrecto, ingresar DO")
+    listaProductos = prompt("¡Hola! escribí DO para ver los productos disponibles")
+}
+
+alert("Estos son nuestros productos disponibles :" +  "\n" +listaBebidasPrecios)
 
 let productos = prompt("Elige tu producto: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n Escribe ESC para finalizar la compra")
 
