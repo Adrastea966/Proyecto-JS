@@ -1,0 +1,285 @@
+/*VARIABLES*/
+/*GLOBALES*/
+/* Normalize */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* Globals */
+html {
+  font-size: 62.5%; }
+
+body {
+  height: 100vh; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+/*VIEWS*/
+/* Header */
+.body-coco {
+  background-color: black;
+  overflow: hidden; }
+
+.navbar .menu2 {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu2::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2 .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu2 .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+.body-frutilla {
+  background-color: #f551b3;
+  overflow: hidden; }
+
+.navbar .menu2 {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu2::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2 .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu2 .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+.body-melon {
+  background-color: #91c100;
+  overflow: hidden; }
+
+.navbar .menu2 {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu2::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2 .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu2 .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+.body-sandia {
+  background-color: white;
+  overflow: hidden; }
+
+.navbar .menu {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: black;
+    margin-top: 30px; }
+  .navbar .menu::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: black;
+    margin-top: 30px; }
+  .navbar .menu .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+.body-almendras {
+  background-color: #b86200;
+  overflow: hidden; }
+
+.navbar .menu2 {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu2::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: white;
+    margin-top: 30px; }
+  .navbar .menu2 .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu2 .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+/* Home */
+/* Header */
+body {
+  background-color: antiquewhite;
+  overflow: hidden; }
+
+.navbar .menu {
+  display: flex;
+  padding-left: 50px;
+  gap: 20px;
+  position: absolute;
+  top: 85%; }
+  .navbar .menu::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: black;
+    margin-top: 30px; }
+  .navbar .menu::before {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: black;
+    margin-top: 30px; }
+  .navbar .menu .menu-item .fruta {
+    width: 70px;
+    transition: 0.3s ease-in-out; }
+    .navbar .menu .menu-item .fruta:hover {
+      transform: scale(1.2); }
+
+.interactivo {
+  display: flex;
+  padding: 30px;
+  margin-right: 60px;
+  justify-content: flex-end;
+  gap: 120px; }
+  .interactivo .redes img {
+    width: 30px;
+    margin: 0 20px; }
+  .interactivo .compras img {
+    width: 40px; }
+
+/* PARTIALS */
+.logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .logo a {
+    color: black;
+    font-size: 4em; }
+
+.logo2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .logo2 a {
+    color: white;
+    font-size: 4em; }

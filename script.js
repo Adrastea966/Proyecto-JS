@@ -50,7 +50,7 @@ bebidas.forEach((refresco) => {
 })
 
 while (listaProductos !== "DO") {
-    alert("Incorrecto, ingresar DO")
+    console.log("Incorrecto, ingresar DO")
     listaProductos = prompt("¡Hola! escribí DO para ver nuestros productos")
 }
 alert("Lista de nuestros productos :" + "\n" + listaBebidasPrecios)
@@ -117,18 +117,20 @@ function carrito() {
             break
 
         case "3":
-            alert('Refresco de sandía se agregó al carrito');
+           alert('Refresco de sandía se agregó al carrito');
             precioFinal(350)
             break
 
         case "4":
             alert('Refresco de melón se agregó al carrito');
             precioFinal(470)
+            break
         
         case "5":
             alert('Leche de almendras se agregó al carrito');
             precioFinal(500)
-
+            break
+            
         default:
             alert('Aún no tenemos ese refresco en nuestra tienda :(');
     }
