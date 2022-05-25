@@ -1,6 +1,8 @@
 /*VARIABLES*/
 /*GLOBALES*/
 /* Normalize */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@100;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
 *,
 *::after,
 *::before {
@@ -62,6 +64,31 @@ ul {
     margin: 0 20px; }
   .interactivo .compras img {
     width: 40px; }
+
+main section {
+  position: absolute;
+  color: white;
+  padding-left: 80px;
+  top: 25%; }
+  main section h1 {
+    font-size: 5em; }
+  main section p {
+    font-size: 2em;
+    width: 300px; }
+
+main div {
+  position: absolute;
+  left: 35%;
+  top: 10%; }
+  main div img {
+    width: 700px; }
+
+main .hoja2 {
+  position: absolute;
+  left: 78%;
+  top: 10%; }
+  main .hoja2 img {
+    width: 350px; }
 
 .body-frutilla {
   background-color: #f551b3;
@@ -271,15 +298,10 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  .logo a {
-    color: black;
-    font-size: 4em; }
 
 .logo2 {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .logo2 a {
-    color: white;
-    font-size: 4em; }
+  top: 4%;
+  left: 4%; }
+  .logo2 img {
+    width: 100px; }

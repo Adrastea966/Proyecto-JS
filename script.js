@@ -147,3 +147,23 @@ while (productos != 'ESC') {
     productos = prompt("Comprar productos en stock: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón \n 5. Leche de almendras \n Escribe ESC para finalizar la compra")
 }
 alert('Compra finalizada. El precio total de su compra es : $' + precioTotal)
+
+// DOM
+
+let titulo=document.getElementById("titulo");
+titulo.style.font= "bold 45px poppins";
+
+const descripcion = document.getElementById("descripcion")
+const texto=document.createElement("p");
+texto.textContent = "Ver más"
+descripcion.appendChild(texto)
+
+texto.style.color= "white"
+
+
+
+
+
+
+
+

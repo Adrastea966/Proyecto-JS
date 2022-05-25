@@ -3,22 +3,16 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
-    
-    a { 
-        color: black;
-        font-size: 4em;
-    }
 }
 
 .logo2 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 
-    a {
-        color: white;
-        font-size: 4em;
-       
+    position: absolute;
+    top:4%;
+    left: 4%;
+
+    img{
+        width: 100px;
     }
+ 
 }
