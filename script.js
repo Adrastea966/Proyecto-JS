@@ -1,169 +1,93 @@
 // Simulador de carrito de compras
 
-let listaBebidasPrecios = ''
-let listaProductos;
-listaProductos = prompt("¡Hola! escribí DO para ver nuestros productos")
-
-const bebidas = [{
-    bebida: "Leche de coco",
-    sabor: "coco",
-    precioProducto: 360
+//array de bebidas
+const productos = [{
+    id: 1,
+    bebida: "Refresco de coco",
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/cocolata.png",
+    precio: 360
 }, {
+    id: 2,
     bebida: "Refresco de frutilla",
-    sabor: "frutilla",
-    precioProducto: 475
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/frutillalata.jpg",
+    precio: 475
 }, {
+    id: 3,
     bebida: "Refresco de sandía",
-    sabor: "sandía",
-    precioProducto: 350
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/sandialata.png",
+    precio: 350
 }, {
+    id: 4,
     bebida: "Refresco de melón",
-    sabor: "melón",
-    precioProducto: 470
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/melon.jpg",
+    precio: 470
 }, {
+    id: 5,
     bebida: "Refresco de durazno",
-    sabor: "durazno",
-    precioProducto: 470
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/durazno.jpg",
+    precio: 470
 }, {
+    id: 6,
     bebida: "Refresco de uva",
-    sabor: "uva",
-    precioProducto: 450
-},{
-    bebida: "Gaseosa de ananá",
-    sabor: "ananá",
-    precioProducto: 380
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/uva.jpg",
+    precio: 450
 }, {
-    bebida: "Leche de almendras",
-    sabor: "almendras",
-    precioProducto: 500
+    id: 7,
+    bebida: "Refresco de limón",
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/limon.jpg",
+    precio: 360
 }, {
-    bebida: "Jugo de banana",
-    sabor: "banana",
-    precioProducto: 350
-},];
+    id: 8,
+    bebida: "Refresco de kiwi",
+    descripcion: "Refrescante bebida de 340ml",
+    imagen: "assets/image/kiwi.jpg",
+    precio: 400
+}];
 
-//forEach()
 
-bebidas.forEach((refresco) => {
-    listaBebidasPrecios += refresco.bebida + "\n"
-    listaBebidasPrecios += "$" + refresco.precioProducto + "\n"
-})
+// función para mostrar los productos en el HTML
 
-while (listaProductos !== "DO") {
-    console.log("Incorrecto, ingresar DO")
-    listaProductos = prompt("¡Hola! escribí DO para ver nuestros productos")
-}
-alert("Lista de nuestros productos :" + "\n" + listaBebidasPrecios)
+let carrito = [];
+let tarjeta = document.getElementById("tarjeta");
 
-// filter()
+productosCarrito();
 
-const nombres = [
-    "leche de coco",
-    "refresco de durazno",
-    "refresco de uva",
-    "gaseosa de ananá",
-    "leche de almendras",
-    "jugo de banana",
-    "refresco de frutilla"
-];
-
-function buscarBebidas(nombres, buscar) {
-    let bebidasDeseadas = nombres.filter(function (bebida) {
-        return bebida.includes(buscar);
-    })
-    return bebidasDeseadas;
-}
-
-if (buscarBebidas) {
-    alert("Productos recomendados: " + buscarBebidas(nombres, "l"));
-}
-
-// find()
-
-let encontrar = prompt("Según la lista que viste, seleccioná el producto que desees y mira si está en stock o no")
-const arrayBebidas = ["Leche de coco", "Refresco de frutilla", "Refresco de sandía", "Refresco de melón", "Leche de almendras"]
-const found = arrayBebidas.find(el => {
-    el
-})
-
-if (encontrar == "Leche de coco") {
-    alert("Sí, tu producto está en stock");
-} else if (encontrar == "Refresco de frutilla") {
-    alert("Sí, tu producto está en stock");
-} else if (encontrar == "Refresco de sandía") {
-    alert("Sí, tu producto está en stock");
-} else if (encontrar == "Refresco de melón") {
-    alert("Sí, tu producto está en stock");
-} else if (encontrar == "Leche de almendras") {
-    alert("Sí, tu producto está en stock");
-}  else {
-    alert("Lo sentimos, no tenemos stock de este producto");
-}
-
-//function
-
-let productos = prompt("Comprar productos en stock: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón  \n 5. Leche de almendras \n Escribe ESC para finalizar la compra")
-
-function carrito() {
-    switch (productos) {
-        case "1":
-            alert('Leche de coco se agregó al carrito');
-            precioFinal(360)
-            break
-
-        case "2":
-            alert('Refresco de frutilla se agregó al carrito');
-            precioFinal(475)
-            break
-
-        case "3":
-           alert('Refresco de sandía se agregó al carrito');
-            precioFinal(350)
-            break
-
-        case "4":
-            alert('Refresco de melón se agregó al carrito');
-            precioFinal(470)
-            break
-        
-        case "5":
-            alert('Leche de almendras se agregó al carrito');
-            precioFinal(500)
-            break
-            
-        default:
-            alert('Aún no tenemos ese refresco en nuestra tienda :(');
+function productosCarrito() {
+    for (const producto of productos) {
+        tarjeta.innerHTML += `<div class="card" style="width: 250px;">
+        <h3> ID: ${producto.id} </h3>
+        <img src="${producto.imagen}" width="200" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h4 class="card-title">${producto.bebida}</h4>
+        <p><strong> $ ${producto.precio}</strong></p>
+        <button class="btn btn-primary" id="btn${producto.id}">Comprar</button>
+        </div>`;
     }
+
+    productos.forEach(producto => {
+        document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
+            seAgregoAlCarrito(producto);
+        });
+    });
 }
+
+function seAgregoAlCarrito(nuevo) {
+    carrito.push(nuevo);
+    alert("Este producto se agregó al carrito")
+}
+
+
+//funcion para finalizar la compra
 
 let precioTotal = 0;
-
 function precioFinal(precio) {
     precioTotal += precio
 }
-
-while (productos != 'ESC') {
-    carrito()
-    productos = prompt("Comprar productos en stock: \n 1. Leche de coco \n 2. Refresco de frutilla \n 3. Refresco de sandía \n 4. Refresco de melón \n 5. Leche de almendras \n Escribe ESC para finalizar la compra")
-}
-alert('Compra finalizada. El precio total de su compra es : $' + precioTotal)
-
-// DOM
-
-let titulo=document.getElementById("titulo");
-titulo.style.font= "bold 45px poppins";
-
-const descripcion = document.getElementById("descripcion")
-const texto=document.createElement("p");
-texto.textContent = "Ver más"
-descripcion.appendChild(texto)
-
-texto.style.color= "white"
-
-
-
-
-
-
-
 

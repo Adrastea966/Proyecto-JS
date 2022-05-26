@@ -1,67 +1,93 @@
 /* Home */
-
 /* Header */
-body {
-    background-color: antiquewhite;
-    overflow: hidden;
+body{
+    background-color: white;
 }
+.main {
 
-.navbar {
-
-    .menu {
-        display: flex;
-        padding-left: 50px;
-        gap: 20px;
+    height: 800px;
+    .navbar {
+        display:flex;
         position: absolute;
-        top: 85%;
+        top:15%;
+        left: 5%;
+        gap: 20px;
+        
+        .menu {
+            
+            .menu-item {
+                .fruta {
+                    padding: 5px;
+                    width: 100px;
+                    transition: 0.3s ease-in-out;
 
-        &::after {
-            content: '';
-            width: 90px;
-            height: 2px;
-            background-color: black;
-            margin-top: 30px;
-        }
-
-        &::before {
-            content: '';
-            width: 90px;
-            height: 2px;
-            background-color: black;
-            margin-top: 30px;
-        }
-
-        .menu-item {
-            .fruta {
-                width: 70px;
-                transition: 0.3s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.2);
+                    &:hover {
+                        transform: scale(1.2);
+                    }
                 }
+            }
+        }
+    }
+
+    .interactivo {
+        display: flex;
+        padding: 30px;
+        margin-right: 60px;
+        justify-content: flex-end;
+        gap: 120px;
+
+        .redes {
+            img {
+                width: 30px;
+                margin: 0 20px;
+            }
+        }
+
+        .compras {
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    div {
+        button {
+            position: absolute;
+            left: 47%;
+            top: 70%;
+            padding: 10px;
+            cursor: pointer;
+
+            a {
+                color: black;
+                font-weight: 700;
             }
         }
     }
 }
 
-.interactivo {
-    display: flex;
-    padding: 30px;
-    margin-right: 60px;
-    justify-content: flex-end;
-    gap: 120px;
-    
-    .redes {
-        img {
-            width: 30px;
-            margin: 0 20px;
-        }
-    }
+.container{
+   margin: 0 auto;
+   height: 800px;
+   
 
-    .compras {
-        img {
-            width: 40px;
-        }
-    }
+   .card{
+       display:flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 60px;
+       margin-bottom: 90px;
+   }
 }
 
+.mi-boton{
+    position: absolute;
+    top: 275%;
+    left: 45%;
+    
+
+    button{
+        padding: 10px;
+    }
+}
