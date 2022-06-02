@@ -1,6 +1,7 @@
 // Simulador de carrito de compras
 
-//array de bebidas
+
+// Array de productos
 const productos = [{
     id: 1,
     bebida: "Refresco de coco",
@@ -52,18 +53,18 @@ const productos = [{
 }];
 
 
-// función para mostrar los productos en el HTML
-
 let carrito = [];
 let tarjeta = document.getElementById("tarjeta");
 
 productosCarrito();
 
+// Tarjetas en donde se visualizan los productos
+
 function productosCarrito() {
     for (const producto of productos) {
         tarjeta.innerHTML += `<div class="card" style="width: 250px;">
         <h3> ID: ${producto.id} </h3>
-        <img src="${producto.imagen}" width="200" class="card-img-top" alt="...">
+        <img src="${producto.imagen}" class="card-img-top" alt="...">
         <div class="card-body">
         <h4 class="card-title">${producto.bebida}</h4>
         <p><strong> $ ${producto.precio}</strong></p>
@@ -73,21 +74,27 @@ function productosCarrito() {
 
     productos.forEach(producto => {
         document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
-            seAgregoAlCarrito(producto);
+            agregarAlCarrito(producto);
         });
     });
 }
 
-function seAgregoAlCarrito(nuevo) {
-    carrito.push(nuevo);
-    alert("Este producto se agregó al carrito")
+// Agregar al carrito y guardar en Storage
+
+function agregarAlCarrito(productoNuevo){
+    carrito.push(productoNuevo);
+    console.log(carrito);
+    alert("producto: "+productoNuevo.bebida+" agregado al carro!")
+    document.getElementById("carrito-comprar").innerHTML+=`
+
+    <div class="card">
+        <div class="card-body">
+        ${productoNuevo.id}
+        ${productoNuevo.bebida}
+        ${productoNuevo.precio}
+        </div>
+    </div>
+    `;
+
+    sessionStorage.setItem("Productos", JSON.stringify(carrito));
 }
-
-
-//funcion para finalizar la compra
-
-let precioTotal = 0;
-function precioFinal(precio) {
-    precioTotal += precio
-}
-

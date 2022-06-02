@@ -1,20 +1,22 @@
 /* Home */
 /* Header */
-body{
+body {
     background-color: white;
 }
+
 .main {
 
     height: 800px;
+
     .navbar {
-        display:flex;
+        display: flex;
         position: absolute;
-        top:15%;
+        top: 15%;
         left: 5%;
         gap: 20px;
-        
+
         .menu {
-            
+
             .menu-item {
                 .fruta {
                     padding: 5px;
@@ -65,20 +67,4 @@ body{
         }
     }
 }
-
-.container{
-   margin: 0 auto;
-   height: 800px;
-   
-
-   .card{
-       display:flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 60px;
-       margin-bottom: 90px;
-   }
-}
-
 

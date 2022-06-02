@@ -62,24 +62,6 @@ body {
       color: black;
       font-weight: 700; }
 
-.container {
-  margin: 0 auto;
-  height: 800px; }
-  .container .card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 90px; }
-
-.mi-boton {
-  position: absolute;
-  top: 275%;
-  left: 45%; }
-  .mi-boton button {
-    padding: 10px; }
-
 /* PARTIALS */
 .logo {
   position: absolute;
