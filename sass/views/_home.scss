@@ -55,7 +55,7 @@ body {
     div {
         button {
             position: absolute;
-            left: 47%;
+            left: 43%;
             top: 70%;
             padding: 10px;
             cursor: pointer;
@@ -64,6 +64,18 @@ body {
                 color: black;
                 font-weight: 700;
             }
+        }
+    }
+
+    .recomendado {
+        button {
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            padding: 10px;
+            cursor: pointer;
+            color: black;
+            font-weight: 700;
         }
     }
 }

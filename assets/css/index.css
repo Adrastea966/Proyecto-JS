@@ -54,13 +54,21 @@ body {
       width: 40px; }
   .main div button {
     position: absolute;
-    left: 47%;
+    left: 43%;
     top: 70%;
     padding: 10px;
     cursor: pointer; }
     .main div button a {
       color: black;
       font-weight: 700; }
+  .main .recomendado button {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    font-weight: 700; }
 
 /* PARTIALS */
 .logo {

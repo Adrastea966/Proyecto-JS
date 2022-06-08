@@ -15,31 +15,6 @@
 <body>
 
     <main class="main">
-        <nav class="navbar">
-            <ul class="menu">
-                <li class="menu-item">
-                    <a class="menu-link" id="leche-de-coco" href="#coco"><img class="fruta"
-                            src="./assets/image/Coco.png" alt="Coco"></a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" id="refresco-de-frutilla" href="#frutilla"><img class="fruta"
-                            src="./assets/image/Frutilla.png" alt="Frutilla"></a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" id="refresco-de-sandia" href="#sandia"><img class="fruta"
-                            src="./assets/image/Sandía.png" alt="Sandía"></a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" id="refresco-de-melon" href="#melon"><img class="fruta"
-                            src="./assets/image/Melón.png" alt="Melón"></a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" id="leche-de-almendras" href="#almendras"><img class="fruta"
-                            src="./assets/image/Almendras.png" alt="Leche de almendreas"></a>
-                </li>
-            </ul>
-        </nav>
-
         <div class="interactivo">
             <div class="redes">
                 <img src="./assets/image/facebook.png" alt="Facebook">
@@ -47,22 +22,24 @@
                 <img src="./assets/image/wsp.png" alt="Whatsapp">
             </div>
             <div id="carrito" class="compras">
-               <a href="#staticBackdrop" type="button" data-bs-toggle="offcanvas" aria-controls="staticBackdrop"><img src="./assets/image/carrito.png" alt="Carrito"></a> 
+                <a href="#staticBackdrop" type="button" data-bs-toggle="offcanvas" aria-controls="staticBackdrop"><img
+                        src="./assets/image/carrito.png" alt="Carrito"></a>
             </div>
 
         </div>
 
-        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+            aria-labelledby="staticBackdropLabel">
             <div class="offcanvas-header">
-              <h2 class="offcanvas-title" id="staticBackdropLabel">Tu carrito</h2>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <h2 class="offcanvas-title" id="staticBackdropLabel">Tu carrito</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <div id="carrito-comprar">
-                
-              </div>
+                <div id="carrito-comprar">
+
+                </div>
             </div>
-          </div>
+        </div>
 
         <div class="logo">
             <a href="index.html"><img src="./assets/image/Logo.png" alt="Logo"></a>
@@ -70,6 +47,9 @@
 
         <div>
             <button id="boton"><a href="#productosBebidas"> Ver productos</a></button>
+        </div>
+        <div class="recomendado">
+            <button id="boton2" class="boton2">Recomendados</button>
         </div>
     </main>
 
@@ -81,6 +61,7 @@
 
 
     <!-- JavaScript Bundle with Popper -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>

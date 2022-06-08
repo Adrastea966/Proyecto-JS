@@ -1,7 +1,6 @@
 // Simulador de carrito de compras
-
-
 // Array de productos
+
 const productos = [{
     id: 1,
     bebida: "Refresco de coco",
@@ -53,6 +52,29 @@ const productos = [{
 }];
 
 
+//Optimizando el proyecto
+
+const productosRecomendados = ["Refresco de coco", "Refresco de frutilla", "Refresco de limón"]
+
+const [a,b] = productosRecomendados
+console.log("Los más deseables: "+a+" y "+b);
+
+
+
+let boton = document.getElementById("boton2")
+boton.onclick = () => {
+    productosRecomendados.length !== 0 && Swal.fire({
+        title: 'Productos recomendados!',
+        text: 'Refresco de coco, refresco de frutilla y refresco de limón. ¿Qué esperas para probrarlos?',
+        imageUrl: 'assets/image/x.jpg',
+        imageWidth: 400,
+        imageHeight: 250,
+        imageAlt: 'bebidas',
+    })
+    console.log(...productosRecomendados)
+}
+
+
 let carrito = [];
 let tarjeta = document.getElementById("tarjeta");
 
@@ -81,11 +103,27 @@ function productosCarrito() {
 
 // Agregar al carrito y guardar en Storage
 
-function agregarAlCarrito(productoNuevo){
-    carrito.push(productoNuevo);
-    console.log(carrito);
-    alert("producto: "+productoNuevo.bebida+" agregado al carro!")
-    document.getElementById("carrito-comprar").innerHTML+=`
+function agregarAlCarrito(productoNuevo) {
+
+    if (carrito.includes(productoNuevo)) {
+        Swal.fire({
+            title: 'Ya esta en tu carrito!',
+            text: 'Continuar con tu compra',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar'
+        }).showToast();
+    } else {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: (productoNuevo.bebida + " agregado al carro!"),
+            showConfirmButton: false,
+            timer: 1500
+        })
+        carrito.push(productoNuevo);
+    }
+
+    document.getElementById("carrito-comprar").innerHTML += `
 
     <div class="card">
         <div class="card-body">
