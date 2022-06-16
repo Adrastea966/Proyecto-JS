@@ -54,16 +54,16 @@ const productos = [{
 
 //Optimizando el proyecto
 
-const productosRecomendados = ["Refresco de coco", "Refresco de frutilla", "Refresco de limón"]
+const recomendados = ["Refresco de coco", "Refresco de frutilla", "Refresco de limón"]
 
-const [a,b] = productosRecomendados
-console.log("Los más deseables: "+a+" y "+b);
+const [a, b] = recomendados
+console.log("Los más deseables: " + a + " y " + b);
 
 
 
 let boton = document.getElementById("boton2")
 boton.onclick = () => {
-    productosRecomendados.length !== 0 && Swal.fire({
+    recomendados.length !== 0 && Swal.fire({
         title: 'Productos recomendados!',
         text: 'Refresco de coco, refresco de frutilla y refresco de limón. ¿Qué esperas para probrarlos?',
         imageUrl: 'assets/image/x.jpg',
@@ -71,7 +71,7 @@ boton.onclick = () => {
         imageHeight: 250,
         imageAlt: 'bebidas',
     })
-    console.log(...productosRecomendados)
+    console.log(...recomendados)
 }
 
 
@@ -127,7 +127,6 @@ function agregarAlCarrito(productoNuevo) {
 
     <div class="card">
         <div class="card-body">
-        ${productoNuevo.id}
         ${productoNuevo.bebida}
         ${productoNuevo.precio}
         </div>
@@ -136,3 +135,24 @@ function agregarAlCarrito(productoNuevo) {
 
     sessionStorage.setItem("Productos", JSON.stringify(carrito));
 }
+
+// Productos recomendados usando .json local y fetch
+
+function productosRecomendados() {
+    fetch('recomendados.json')
+        .then(response => response.json())
+        .then(bebida => {
+            bebida.forEach(bebida =>{
+                document.getElementById("tarjeta2").innerHTML+=`  
+                <div class="card" style="width: 250px;">
+                <h3> ${bebida.title} </h3>  
+                <img src="${bebida.image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h4>${bebida.price}</h4>
+                `
+            });
+        });
+}
+
+productosRecomendados()
+

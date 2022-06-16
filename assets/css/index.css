@@ -23,10 +23,6 @@ ul {
 
 /*VIEWS*/
 /* Home */
-/* Header */
-body {
-  background-color: white; }
-
 .main {
   height: 800px; }
   .main .navbar {
@@ -69,6 +65,28 @@ body {
     cursor: pointer;
     color: black;
     font-weight: 700; }
+  .main .btn-close {
+    top: 3.5%;
+    left: 85%;
+    opacity: 6; }
+  .main .btn-outline-success {
+    top: 89%;
+    left: 10%;
+    padding: 15px;
+    font-size: 1.6em; }
+  .main .btn-outline-danger {
+    top: 89%;
+    left: 50%;
+    padding: 15px;
+    font-size: 1.6em; }
+
+.section-container {
+  padding-bottom: 150px; }
+
+.recomendado2 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #7fd300; }
 
 /* PARTIALS */
 .logo {
