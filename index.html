@@ -8,65 +8,86 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/776f4d6d51.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Home</title>
 </head>
 
 <body>
+    <!-- Comienza header-->
+    <header>
+        <div class="logo">
+            <img src="assets/image/Logo.png" alt="Logo">
+        </div>
+        <div class="div-tienda"><button class="btn btn-shop" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-shop"></i></button></div>
 
+    </header>
+    <!-- Termina header-->
+
+    <section class="section-banner">
+        <div>
+            <img class="img-fluid" src="assets/image/cuartaImagen.png">
+        </div>
+    </section>
+
+    <!-- Comienza seccion main-->
     <main class="main">
-        <div class="interactivo">
-            <div class="redes">
-                <img src="./assets/image/facebook.png" alt="Facebook">
-                <img src="./assets/image/instagram.png" alt="Instagram">
-                <img src="./assets/image/wsp.png" alt="Whatsapp">
-            </div>
-            <div id="carrito" class="compras">
-                <a href="#staticBackdrop" type="button" data-bs-toggle="offcanvas" aria-controls="staticBackdrop"><img
-                        src="./assets/image/carrito.png" alt="Carrito"></a>
-            </div>
-
+        <div class="recomendados">
+            <button id="boton2" type="button" class="btn recomendado-btn btn-outline-info">Recomendado!</button>
         </div>
 
-        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-            aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                <h2 class="offcanvas-title" id="staticBackdropLabel">Tu carrito</h2>
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Tu carrito</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <div id="carrito-comprar">
+                <div>
+                    <div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Unidades</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Precio x unidad</th>
+                                    <th scope="col">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tabla-body" id="tablabody">
+                                <!-- Aca se renderiza los productos de la tablabody-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="precio-total" id="precio-total">
+                        <!-- Aca se actualiza el precio total -->
+                        <p id="precio-texto">Precio total $0</p>
+                    </div>
+                    <div class="boton-finalizar">
+                        <button type="button" class="btn btn-outline-success" id="finalizar-compra">Finalizar
+                            compra</button>
+                    </div>
 
                 </div>
-                <button type="button" class="btn btn-outline-success">Finalizar compra</button>
-                <button type="button" class="btn btn-outline-danger">Vaciar carrito</button>
             </div>
         </div>
-
-        <div class="logo">
-            <a href="index.html"><img src="./assets/image/Logo.png" alt="Logo"></a>
-        </div>
-
-        <div>
-            <button id="boton"><a href="#productosBebidas"> Ver productos</a></button>
-        </div>
-        <div class="recomendado">
-            <button id="boton2" class="boton2">Recomendados</button>
-        </div>
     </main>
+    <!-- Termina seccion main-->
 
-    <section id="productosBebidas" class="container-md section-container">
-        <div id="tarjeta" class="d-flex flex-wrap justify-content-center gap-5">
-            <!-- Aquí van los divs con la clase "card" -->
+    <div id="contenedor-tarjetas" class="d-flex flex-wrap justify-content-center gap-5 container-md contenedor">
+        <!-- Aquí se renderizan los productos -->
+    </div>
+
+    <!-- Comienza footer-->
+    <footer class="footer">
+        <div class="copy">
+            <p>Todos los derechos reservados&copy; 2022</p>
         </div>
-    </section>
+    </footer>
+    <!-- Termina footer-->
 
-    <section class="recomendado2">
-        <div id="tarjeta2" class="container-md d-flex flex-wrap justify-content-center gap-5 editable">
-
-        </div>
-    </section>
-    
     <!-- JavaScript Bundle with Popper -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

@@ -1,110 +1,159 @@
 /* Home */
 
+header {
+    height: 200px;
 
+    .logo {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 150px;
+        }
+    }
+
+    .div-tienda {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .btn-shop {
+
+        font-size: 3em;
+
+    }
+}
+
+.section-banner {
+    .img-fluid {
+        margin-top: 30px;
+    }
+}
 
 .main {
+    height: 350px;
 
-    height: 800px;
-
-    .navbar {
+    .recomendados {
+        padding-top: 90px;
         display: flex;
-        position: absolute;
-        top: 15%;
-        left: 5%;
-        gap: 20px;
+        justify-content: center;
 
-        .menu {
-
-            .menu-item {
-                .fruta {
-                    padding: 5px;
-                    width: 100px;
-                    transition: 0.3s ease-in-out;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                }
-            }
+        .recomendado-btn {
+            font-size: 3em;
+            padding: 20px;
+            border-radius: 90px;
         }
     }
 
-    .interactivo {
-        display: flex;
-        padding: 30px;
-        margin-right: 60px;
-        justify-content: flex-end;
-        gap: 120px;
-
-        .redes {
-            img {
-                width: 30px;
-                margin: 0 20px;
-            }
-        }
-
-        .compras {
-            img {
-                width: 40px;
-            }
-        }
+    .offcanvas-title {
+        font-size: 3em;
     }
 
-    div {
+    .table {
+        font-size: 1.6em;
+    }
+
+    .precio-total {
+        font-size: 1.6em;
+    }
+
+    .boton-finalizar {
         button {
-            position: absolute;
-            left: 43%;
-            top: 70%;
             padding: 10px;
-            cursor: pointer;
-
-            a {
-                color: black;
-                font-weight: 700;
-            }
         }
     }
 
-    .recomendado {
-        button {
-            position: absolute;
-            left: 50%;
-            top: 70%;
-            padding: 10px;
-            cursor: pointer;
-            color: black;
-            font-weight: 700;
-        }
-    }
-
-    .btn-close{
+    .btn-close {
         top: 3.5%;
         left: 85%;
         opacity: 6;
     }
 
-    .btn-outline-success{
-        top: 89%;
-        left: 10%;
+    .cerrar {
+        top: 30%;
+        left: 85%;
+    }
+
+    .btn-outline-success {
         padding: 15px;
         font-size: 1.6em;
     }
 
-    .btn-outline-danger{
+    .close-item {
+        font-size: 10px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+}
+
+.contenedor {
+    .producto-bebida {
+        position: relative;
+        border: solid black 2px;
+
+        .producto-img {
+            width: 300px;
+        }
+
+        .nombre {
+            padding: 20px 0;
+            display: flex;
+            background-color: rgb(255, 85, 0);
+            justify-content: center;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .contenido-texto {
+                padding: 15px 0;
+                width: 200px;
+                font-size: 1.5em;
+            }
+
+            .contenido-boton {
+                margin-bottom: 20px;
+                padding: 10px;
+                border: solid black 2px;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                    transition: ease-in-out 0.3s;
+                }
+            }
+        }
+
+    }
+}
+
+.tabla-body {
+    .boton-eliminar-producto {
         top: 89%;
         left: 50%;
-        padding: 15px;
-        font-size: 1.6em;
+        padding: 5px 10px;
+        font-size: 1em;
     }
 }
 
-.section-container{
-    padding-bottom: 150px;
-}
+.footer {
+    height: 200px;
+    margin-top: 160px;
+    background-color: rgb(255, 85, 0);
 
-.recomendado2{
-    padding-top: 90px;
-    padding-bottom: 90px;
-    background-color: rgb(127, 211, 0);
+    .copy {
+        color: white;
+        font-weight: 700;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }
-

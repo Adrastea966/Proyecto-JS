@@ -23,81 +23,103 @@ ul {
 
 /*VIEWS*/
 /* Home */
-.main {
-  height: 800px; }
-  .main .navbar {
+header {
+  height: 200px; }
+  header .logo {
     display: flex;
-    position: absolute;
-    top: 15%;
-    left: 5%;
-    gap: 20px; }
-    .main .navbar .menu .menu-item .fruta {
-      padding: 5px;
-      width: 100px;
-      transition: 0.3s ease-in-out; }
-      .main .navbar .menu .menu-item .fruta:hover {
-        transform: scale(1.2); }
-  .main .interactivo {
+    justify-content: center; }
+    header .logo img {
+      width: 150px; }
+  header .div-tienda {
     display: flex;
-    padding: 30px;
-    margin-right: 60px;
+    align-items: center;
     justify-content: flex-end;
-    gap: 120px; }
-    .main .interactivo .redes img {
-      width: 30px;
-      margin: 0 20px; }
-    .main .interactivo .compras img {
-      width: 40px; }
-  .main div button {
-    position: absolute;
-    left: 43%;
-    top: 70%;
-    padding: 10px;
-    cursor: pointer; }
-    .main div button a {
-      color: black;
-      font-weight: 700; }
-  .main .recomendado button {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    padding: 10px;
-    cursor: pointer;
-    color: black;
-    font-weight: 700; }
+    padding-right: 20px; }
+  header .btn-shop {
+    font-size: 3em; }
+
+.section-banner .img-fluid {
+  margin-top: 30px; }
+
+.main {
+  height: 350px; }
+  .main .recomendados {
+    padding-top: 90px;
+    display: flex;
+    justify-content: center; }
+    .main .recomendados .recomendado-btn {
+      font-size: 3em;
+      padding: 20px;
+      border-radius: 90px; }
+  .main .offcanvas-title {
+    font-size: 3em; }
+  .main .table {
+    font-size: 1.6em; }
+  .main .precio-total {
+    font-size: 1.6em; }
+  .main .boton-finalizar button {
+    padding: 10px; }
   .main .btn-close {
     top: 3.5%;
     left: 85%;
     opacity: 6; }
+  .main .cerrar {
+    top: 30%;
+    left: 85%; }
   .main .btn-outline-success {
-    top: 89%;
-    left: 10%;
     padding: 15px;
     font-size: 1.6em; }
-  .main .btn-outline-danger {
-    top: 89%;
-    left: 50%;
-    padding: 15px;
-    font-size: 1.6em; }
+  .main .close-item {
+    font-size: 10px;
+    padding: 10px;
+    margin-top: 25px; }
 
-.section-container {
-  padding-bottom: 150px; }
+.contenedor .producto-bebida {
+  position: relative;
+  border: solid black 2px; }
+  .contenedor .producto-bebida .producto-img {
+    width: 300px; }
+  .contenedor .producto-bebida .nombre {
+    padding: 20px 0;
+    display: flex;
+    background-color: #ff5500;
+    justify-content: center; }
+  .contenedor .producto-bebida .contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .contenedor .producto-bebida .contenido .contenido-texto {
+      padding: 15px 0;
+      width: 200px;
+      font-size: 1.5em; }
+    .contenedor .producto-bebida .contenido .contenido-boton {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: solid black 2px; }
+      .contenedor .producto-bebida .contenido .contenido-boton:hover {
+        background-color: black;
+        color: white;
+        transition: ease-in-out 0.3s; }
 
-.recomendado2 {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-color: #7fd300; }
+.tabla-body .boton-eliminar-producto {
+  top: 89%;
+  left: 50%;
+  padding: 5px 10px;
+  font-size: 1em; }
+
+.footer {
+  height: 200px;
+  margin-top: 160px;
+  background-color: #ff5500; }
+  .footer .copy {
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px; }
 
 /* PARTIALS */
-.logo {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.logo2 {
-  position: absolute;
-  top: 4%;
-  left: 4%; }
-  .logo2 img {
-    width: 100px; }
